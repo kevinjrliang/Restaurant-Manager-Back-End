@@ -17,3 +17,12 @@ model restaurant {
   phone_number String
   created_at DateTime
 }
+
+model user_account {
+  id Int @id @default(autoincrement())
+  restaurant_id BigInt
+  username String
+  password String
+  access_level String
+  created_at DateTime
+}
