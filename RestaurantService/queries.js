@@ -6,7 +6,7 @@ const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
   database: 'RestaurantService',
-  password: '123123',
+  password: '123123', // Make sure this is the same as your postgres database password
   port: 5432,
 })
 
@@ -35,5 +35,7 @@ const getUser = (request, response) => {
   }
 
 module.exports = {
-  getUser: getUser
+  getUser: getUser,
+  getUsers: getUsers,
+  addRestaurant: addRestaurant
 }

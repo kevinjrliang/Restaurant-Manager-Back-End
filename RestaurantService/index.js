@@ -11,10 +11,14 @@ app.use(
   })
 );
 
-app.get('/user', (request, response) => {
-    queries.getUser(request, response);
+app.get('/', (request, response) => {
+  response.json({ info: 'Node.js, Express, and Postgres API 12312' });
 });
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`);
+});
+
+app.get('/api/RestaurantService/user', (request, response) => {
+  queries.getUser(request, response);
 });
