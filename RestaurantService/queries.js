@@ -1,6 +1,5 @@
-import { PrismaClient } from '@prisma/client'
-
-const prisma = new PrismaClient()
+const p = require('@prisma/client');
+const prisma = new p.PrismaClient()
 
 const Pool = require('pg').Pool
 const pool = new Pool({
@@ -21,6 +20,11 @@ const getUsers = (request, response) => {
     })
   }
 
+const getUser = (request, response) => {
+  console.log(request.body)
+  response.status(200)
+  }
+
   const addRestaurant = (request, response) => {
     pool.query('INSERT INTO restaurant VALUES', (error, results) => {
       if (error) {
@@ -29,3 +33,7 @@ const getUsers = (request, response) => {
       response.status(200).json(results.rows)
     })
   }
+
+module.exports = {
+  getUser: getUser
+}

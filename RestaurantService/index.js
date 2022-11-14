@@ -1,4 +1,5 @@
 const express = require('express');
+const queries = require('./queries.js');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 9000;
@@ -10,8 +11,8 @@ app.use(
   })
 );
 
-app.get('/', (request, response) => {
-    response.json({ info: 'Node.js, Express, and Postgres API 12312' });
+app.get('/user', (request, response) => {
+    queries.getUser(request, response);
 });
 
 app.listen(port, () => {
