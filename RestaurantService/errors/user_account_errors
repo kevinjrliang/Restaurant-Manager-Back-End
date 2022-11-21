@@ -1,0 +1,14 @@
+const UsernameAlreadyExistsError = {
+    code: 'USRACCERR01',
+    message: 'This username already exists'
+};
+
+const FailedToCreateAccountError = {
+    code: 'USRACCERR02',
+    message: 'Unable to create user'
+};
+
+module.exports = {
+    UsernameAlreadyExistsError,
+    FailedToCreateAccountError
+}
