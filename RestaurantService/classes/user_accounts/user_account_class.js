@@ -1,7 +1,7 @@
 class UserAccount {
-    constructor(username, password, access_level, restaurant_name = undefined, location = undefined, phone_number = undefined) {
+    constructor(username, passwordHash, access_level, restaurant_name = undefined, location = undefined, phone_number = undefined) {
         this.username = username;
-        this.password = password;
+        this.passwordHash = passwordHash;
         this.access_level = access_level;
         this.created_at = new Date();
         if (restaurant_name && location && phone_number) {
@@ -19,7 +19,7 @@ class UserAccount {
     toJSON() {
         return {
             username: this.username,
-            password: this.password,
+            passwordHash: this.passwordHash,
             access_level: this.access_level,
             restaurant: this.restaurant
         }

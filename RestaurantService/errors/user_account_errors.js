@@ -9,7 +9,7 @@ const FailedToCreateAccountError = {
 };
 
 const InvalidUsernameOrPasswordError = {
-    code: 'USRACCERR02',
+    code: 'USRACCERR03',
     message: 'Incorrect Password or Username'
 };
 
