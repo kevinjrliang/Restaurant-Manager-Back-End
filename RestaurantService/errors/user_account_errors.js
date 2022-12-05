@@ -8,7 +8,13 @@ const FailedToCreateAccountError = {
     message: 'Unable to create user'
 };
 
+const InvalidUsernameOrPasswordError = {
+    code: 'USRACCERR03',
+    message: 'Incorrect Password or Username'
+};
+
 module.exports = {
     UsernameAlreadyExistsError,
-    FailedToCreateAccountError
+    FailedToCreateAccountError,
+    InvalidUsernameOrPasswordError
 }
